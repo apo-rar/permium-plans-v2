@@ -1,0 +1,361 @@
+body {
+  font-family: 'IBM plex mono', monospace;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0 0 255 / 0.3);
+  /* height: 110vh; */
+}
+
+.h-container {
+  background-color: rgb(200 200 255);
+  display:  grid;
+  grid-template-columns: 25% 75%;
+  /* padding: 5px; */
+}
+
+.h-logo-con {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.h-logo {
+  font-size: 6vw;
+  font-weight: bolder;
+  text-decoration: none;
+  color: white;
+  font-family: "Courier prime", monospace;
+}
+
+.h-nav-bar {
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 1 0 25%;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+}
+
+.h-nav-bar>li>a {
+  color: white;
+  text-decoration: none;
+  background-color: rgb(220 220 255);
+  padding: 15px;
+  font-size: 30px;
+  border-radius: 25px;
+  text-wrap: nowrap;
+  text-transform: capitalize;
+  font-weight: 600;
+  transition: background-color 0.25s, border-radius 0.3s;
+}
+
+.h-nav-bar>li>a:hover {
+  background-color: rgb(230 240 255);
+  border-radius: 15px;
+}
+
+.h-nav-bar>li>a:active {
+  background-color: rgb(180 180 255);
+  border-radius: 15px;
+}
+
+/* premium plans */
+
+.prem-plans {
+  width: 1250px;
+  height: auto;
+  background-color: rgb(200 200 255);
+  margin: 0px auto;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px 2fr;
+  row-gap: 15px;
+  column-gap: 10px;
+  margin-top: 25px;
+  padding: 0px 30px 30px;
+}
+
+.p-head-con {
+  grid-row: 1;
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-head-con>div {
+  text-align: center;
+  background-color: rgb(220 220 255);
+  width: 50%;
+  height: 75%;
+  border-radius: 25px;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+}
+
+div>h2 {
+  color: #fff;
+  text-transform: capitalize;
+}
+
+
+/* detected problem */
+/* the problem was the plans won't hover slowly */
+/* .plans {
+  grid-row: 2;
+  background-color: rgb(220 220 255);
+  object-fit: fill;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px repeat(3, 100px);
+  border-radius: 50px;
+  color: white;
+  transition: all 1s !important;
+}
+
+.plans:hover {
+  position: relative;
+  /* left: 25px; *
+  bottom: 25px;
+  box-shadow: 0px 0px 100px 50px;
+  border: solid 1px white;
+} */
+/* the fix was by shiftting the position from the .plans:hover to .plans
+   and adding bottom property with value of 0px in the .plans
+ */
+
+ .plans {
+  grid-row: 2;
+  background-color: rgb(220 220 255);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px repeat(3, 100px);
+  border-radius: 50px;
+  color: white;
+  transition: all 0.5s, border-radius 0.25s;
+  position: relative;
+  bottom: 0px;
+}
+
+.plans:hover {
+  /* left: 25px; */
+  bottom: 25px;
+  z-index: 1;
+  box-shadow: 0px 0px 100px 50px;
+  border: solid 1px white;
+  border-radius: 25px
+}
+ 
+.p-type-con {
+  grid-area: 1/1/2/-1;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.p-type {
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+  background-color: rgb(200 200 255);
+  padding: 5px 10px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.plans>img {
+  grid-area: 2/1/4/3;
+  width: 200px;
+  height: 200px;
+  margin: 0px auto;
+}
+
+.p-details {
+  grid-area: 2/3/4/-1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  background-color:rgb(180 180 255);
+  margin-right: 7px;
+  border-radius: 25px;
+}
+
+.p-price {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.p-details>ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul>hr {
+  border: 1px solid #fff;
+  padding: 0;
+}
+
+.buttons-con {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  grid-row: 4;
+  grid-column: 2 / 4;
+}
+
+.buttons-con>button {
+  height: 50px;
+  padding: 10px;
+  background-color: rgb(150 150 255);
+  color: #fff;
+  text-transform: capitalize;
+  border: none;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+
+.left-b {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-right: solid 1px rgb(120 120 255) !important;
+}
+
+.right-b {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-left: solid 1px rgb(120 120 255) !important;
+}
+
+.buttons-con>button:hover {
+  background-color: rgb(100 100 255 / 75%);
+}
+
+.buttons-con>.left-b:hover {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.buttons-con>.right-b:hover {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+footer {
+  color: #fff;
+  background-color: rgb(200 200 255);
+  height: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 0px;
+  
+}
+
+.f-items {
+  flex: 0;
+  background-color: rgb(220 220 255);
+  padding: 15px;
+  border-radius: 15px;
+  height: auto;
+}
+.f-item-1 {
+  flex-basis: 50px;
+}
+
+.f-item-1>a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: "Courier prime", monospace;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.f-item-2 {
+  flex-basis: 250px;
+  height: 33.3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+
+.f-item-2:hover {
+  background-color: rgb(150 150 255);
+  height: 50px;
+  flex-basis: 300px;
+  font-size: larger;
+}
+
+.f-item-2>div {
+  font-weight: 800;
+  cursor: default;
+}
+
+.f-item-3 {
+  flex-basis: 150px;
+}
+
+.s-media {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.s-media>a {
+  color: white;
+  width: 120px;
+  padding: 10px;
+  background-color: rgb(150 150 255);
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+
+.instagram {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: solid 1px rgb(120 120 255);
+}
+
+.linkedin {
+  border-top: solid 1px rgb(120 120 255);
+  border-bottom: solid 1px rgb(120 120 255);
+}
+
+.github {
+  border-top: solid 1px rgb(120 120 255);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.s-media>a:hover {
+  background-color: rgb(100 100 255 / 75%);
+}
+
+.instagram:hover {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.github:hover {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
